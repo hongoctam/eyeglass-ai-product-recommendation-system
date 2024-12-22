@@ -1,0 +1,177 @@
+/* Toàn bộ khung chat */
+.chat-container {
+  width: 350px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  right: 120px;
+  z-index: 999;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Ẩn/hiện khung chat */
+.chat-hidden {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.chat-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Header của khung chat */
+.chat-header {
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Khung tin nhắn */
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+/* Tin nhắn */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+}
+
+.bot-avata {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 10px;
+}
+
+.message .text,
+.message .send {
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message .text {
+  background: #fff;
+  color: #333;
+}
+
+.message .send {
+  background: #4e4bf5;
+  color: #fff;
+  margin-left: auto;
+}
+
+/* Khung nhập tin nhắn */
+.input-container {
+  display: flex;
+  padding: 10px;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input-container button{
+  font-size: 12px;
+}
+
+.input-container input:focus {
+  border: 1px solid #007bff;
+}
+
+.input-container button {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(145deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.input-container button:hover {
+  background: linear-gradient(145deg, #0056b3, #003f88);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Nút bật/tắt khung chat */
+.toggle-button {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.toggle-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toggle-button img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Tin nhắn sản phẩm */
+.product-chat {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  margin: 10px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.chat-mess {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.chat-mess:hover {
+  color: #0056b3;
+}
